@@ -15,7 +15,7 @@ export default function Login(props) {
                     <h1>Faça Seu Login</h1>
                     <input type="text" placeholder="Sua Id" />
                     <button className="button" type="submit">Entrar</button>
-                    <Link to="/registrar">
+                    <Link  className="link-next-page" to="/register">
                         <FiLogIn size={16} color="#E02041" /> Não tenho cadastro?
                     </Link>
                 </form>
