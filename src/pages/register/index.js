@@ -13,7 +13,7 @@ export default function Register(props) {
                 <img src={logo} alt="logo"></img>
                 <h1>Cadastro</h1>
                 <p>
-                Faça seu cadastro, Entre na platafroma e W
+                Faça seu cadastro, entre na platafroma e
                 ajude pessoas a encontrarem casos da sua ONG.
                 </p>
                 <Link  className="link-next-page" to="/">
@@ -22,7 +22,7 @@ export default function Register(props) {
                 </section>
 
                 <form>
-                    <input type="text" placeholder="Nome da ONG"/>
+                    <input type="text" plarceholder="Nome da ONG"/>
                     <input type="email" placeholder="E-mail"/>
                     <input type="text" placeholder="WhatsApp"/>
                     <div className="input-group">
