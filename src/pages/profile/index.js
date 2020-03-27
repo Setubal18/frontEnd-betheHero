@@ -11,7 +11,7 @@ const Profile = () => {
             <header>
             <img src={logo} alt="logo"></img>
             <span>Bem Vinda APAD</span>
-            <Link className="button">Cadastrar Novo Caso</Link>
+            <Link to="/newincident" className="button">Cadastrar Novo Caso</Link>
             <button type='button'>
                 <FiPower size={18} color="#E02041"/>
             </button>
