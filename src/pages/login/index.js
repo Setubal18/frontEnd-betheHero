@@ -4,7 +4,7 @@ import heroesImage from '../../assets/heroes.png'
 import logo from '../../assets/logo.svg'
 import { FiLogIn } from 'react-icons/fi'
 import { Link, useHistory } from 'react-router-dom'
-import api from '../../services/api'
+import {api} from '../../services/api'
 
 export default function Login(props) {
 	const [id, setId] = useState('')

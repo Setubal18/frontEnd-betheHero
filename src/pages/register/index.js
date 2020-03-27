@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import logo from '../../assets/logo.svg'
 import { FiArrowUpLeft } from 'react-icons/fi'
 import { Link, useHistory } from 'react-router-dom'
-import api from '../../services/api'
+import {api} from '../../services/api'
 import './styles.css'
 
 export default function Register(props) {
