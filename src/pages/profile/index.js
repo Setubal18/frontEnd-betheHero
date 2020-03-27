@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiPower } from 'react-icons/fi'
+import { FiPower, FiTrash2 } from 'react-icons/fi'
 
 import logo from '../../assets/logo.svg'
 import { Link } from 'react-router-dom'
@@ -16,6 +16,51 @@ const Profile = () => {
                 <FiPower size={18} color="#E02041"/>
             </button>
             </header>
+			<h1>
+				Casos Cadastrados
+			</h1>
+
+			<ul>
+				<li>
+					<strong>CASO:</strong>
+					<p>caso teste</p>
+					
+					<strong>DESCRIÇÃO:</strong>
+					<p>descricao teste</p>
+					
+					<strong>Valor:</strong>
+					<p>R$120</p>
+					<button>
+						<FiTrash2 size={20} color="#a8a8b3"/>
+					</button>
+				</li>
+				<li>
+					<strong>CASO:</strong>
+					<p>caso teste</p>
+					
+					<strong>DESCRIÇÃO:</strong>
+					<p>descricao teste</p>
+					
+					<strong>Valor:</strong>
+					<p>R$120</p>
+					<button>
+						<FiTrash2 size={20} color="#a8a8b3"/>
+					</button>
+				</li>
+				<li>
+					<strong>CASO:</strong>
+					<p>caso teste</p>
+					
+					<strong>DESCRIÇÃO:</strong>
+					<p>descricao teste</p>
+					
+					<strong>Valor:</strong>
+					<p>R$120</p>
+					<button>
+						<FiTrash2 size={20} color="#a8a8b3"/>
+					</button>
+				</li>
+			</ul>
         </div>
     );
 };
