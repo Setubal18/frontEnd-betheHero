@@ -1,11 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from '../../assets/logo.svg'
 import { FiArrowUpLeft } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
-
+import api from '../../services/api'
 import './styles.css'
 
 export default function Register(props) {
+	const [name,setName] = useState('')
+	const [email,setemail] = useState('')
+	const [whatsapp,setwhatsapp] = useState('')
+	const [city,setcity] = useState('')
+	const [uf,setUF] = useState('')
+
+	async function handleRegister(e){
+		e.preventDefault()
+
+		const data ={
+			name,
+			email,
+			whatsapp,
+			city,
+			uf
+		}
+		try {
+			const response = await api.post('ongs',data)
+
+			alert(`Seu ID de acesso ${response.data.id}`)
+		}
+		catch (e){
+			alert('error no cadastro tente novamente')
+		}
+	}
     return (
         <div className="register-container">
             <div className="content">
@@ -21,13 +46,28 @@ export default function Register(props) {
                 </Link>
                 </section>
 
-                <form>
-                    <input type="text" plarceholder="Nome da ONG"/>
-                    <input type="email" placeholder="E-mail"/>
-                    <input type="text" placeholder="WhatsApp"/>
+                <form onSubmit={handleRegister}>
+					<input 
+					value={name}
+					onChange={e => setName(e.target.value)}
+					type="text" placeholder="Nome da ONG"/>
+					<input 
+					value={email}
+					onChange={e => setemail(e.target.value)}
+					type="email" placeholder="E-mail"/>
+					<input 
+					value={whatsapp}
+					onChange={e => setwhatsapp(e.target.value)}
+					type="text" placeholder="WhatsApp"/>
                     <div className="input-group">
-                        <input type="text" placeholder="Cidade"/>
-                        <input placeholder="UF" style={{with:80}}/>
+						<input 
+						value={city}
+						onChange={e => setcity(e.target.value)}
+						type="text" placeholder="Cidade"/>
+                        <input 
+						value={uf}
+						onChange={e => setUF(e.target.value)}
+						placeholder="UF" style={{with:80}}/>
                     </div>
                     <button className="button">Cadastrar</button>
                 </form>
