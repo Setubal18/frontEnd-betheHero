@@ -6,6 +6,6 @@ export const api = axios.create({
 
 export const headers = {
 	headers:{
-		Autorization: localStorage.getItem('id')
+		Autorization: localStorage.getItem('ongID')
 	}
 }
