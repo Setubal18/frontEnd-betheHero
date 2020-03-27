@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import logo from '../../assets/logo.svg'
 import { FiArrowUpLeft } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import api from '../../services/api'
 import './styles.css'
 
@@ -11,6 +11,8 @@ export default function Register(props) {
 	const [whatsapp,setwhatsapp] = useState('')
 	const [city,setcity] = useState('')
 	const [uf,setUF] = useState('')
+
+	const history = useHistory()
 
 	async function handleRegister(e){
 		e.preventDefault()
@@ -26,6 +28,7 @@ export default function Register(props) {
 			const response = await api.post('ongs',data)
 
 			alert(`Seu ID de acesso ${response.data.id}`)
+			history.push('/')
 		}
 		catch (e){
 			alert('error no cadastro tente novamente')
